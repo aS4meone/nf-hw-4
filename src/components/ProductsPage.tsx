@@ -1,7 +1,7 @@
 "use client";
 import { useQuery } from 'react-query';
-import { fetchProducts, Product } from '@/api/productsService';
 import ProductCard from './ProductCard';
+import {fetchProducts, Product} from "@/api/productsService";
 
 const ProductsPage: React.FC = () => {
   const { data, error, isLoading } = useQuery<Product[]>('products', fetchProducts);
